@@ -107,7 +107,6 @@ class ProjectsViewSet(
 ):
     queryset = Projects.objects.all().order_by("id")
     serializer_class = ProjectsSerializer
-    # filterset_class = ArticleFilterSet
     permission_classes = [IsAuthenticated]
     serializer_class = TasksSerializer
 

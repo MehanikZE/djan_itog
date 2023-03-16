@@ -33,7 +33,6 @@ class Projects(models.Model):
     time_zav = models.DateTimeField(auto_now=True)
     users = models.ManyToManyField(
         to=settings.AUTH_USER_MODEL,
-        # on_delete=models.SET_NULL,
         blank=True,
         null=True,
         related_name="created_tasks",
