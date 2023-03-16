@@ -1,0 +1,14 @@
+{
+  "status": "done",
+  "assets": {
+    "main-d924d8b4b155c2447f5d.js": {
+      "name": "main-d924d8b4b155c2447f5d.js",
+      "path": "C:\\Users\\Admin\\PycharmProjects\\djan_itog\\frontend\\build\\main-d924d8b4b155c2447f5d.js"
+    }
+  },
+  "chunks": {
+    "main": [
+      "main-d924d8b4b155c2447f5d.js"
+    ]
+  }
+}

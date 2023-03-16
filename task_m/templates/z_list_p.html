@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for name_project in name_projects %}
+        <div class="card mb-4">
+            <div class="card-body">
+                <h4 class="card-title">Номер проекта {{ name_project.pk }}</h4>
+                <h6 class="card-subtitle mb-2 text-muted">Активность проекта {{ active_switch }}</h6>
+                <p class="card-text">{{ name_project }} </p>
+                <h4 class="card-text">Исполнители {{ user }}</h4>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock content %}

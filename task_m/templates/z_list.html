@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for zadachi in zadachis %}
+        <div class="card mb-4">
+            <div class="card-body">
+                <h4 class="card-title">Номер задачи {{ zadachi.pk }}</h4>
+                <h6 class="card-subtitle mb-2 text-muted">Активность задачи {{ zadachi.active_switch }}</h6>
+                <p class="card-text">{{ zadachi }} </p>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock content %}
