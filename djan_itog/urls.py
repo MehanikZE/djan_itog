@@ -26,7 +26,7 @@ from task_m.views import (
     ProjectListView,
     ProjectUpdateView,
     ProjectsDeleteView,
-    SyncView
+    SyncView,
 )
 
 urlpatterns = [
@@ -42,6 +42,6 @@ urlpatterns = [
     path("project_del/<int:pk>", ProjectsDeleteView.as_view()),
     path("accounts/", include("django.contrib.auth.urls")),
     path("api/", include("task_m.urls")),
-    path('views/django', SyncView.as_view(), name="async-get"),
+    path("views/django", SyncView.as_view(), name="async-get"),
     path("app", include("react_frontend.urls")),
 ]

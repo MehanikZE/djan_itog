@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "webpack_loader",
     "simple_history",
-    "react_frontend"
+    "react_frontend",
 ]
 
 MIDDLEWARE = [
@@ -138,11 +138,9 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-SERVER_EMAIL = 'server@server.eu'
+SERVER_EMAIL = "server@server.eu"
 
-ADMINS = (
-   ('ADMIN', 'evgeni.a.zhukov@gmail.com'),
- )
+ADMINS = (("ADMIN", "evgeni.a.zhukov@gmail.com"),)
 
 MANAGERS = ADMINS
 
@@ -153,16 +151,15 @@ MANAGERS = ADMINS
 # MANAGERS = ADMINS
 
 
-
 if DEBUG:
-    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 else:
-    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'e969850@gmail.com'
-EMAIL_HOST_PASSWORD = 'Qq12345!@'
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_HOST_USER = "e969850@gmail.com"
+EMAIL_HOST_PASSWORD = "Qq12345!@"
 # если используется защищенное соединение
 EMAIL_PORT = 465
 EMAIL_USE_TLS = True
@@ -195,13 +192,12 @@ LOGGING = {
             "filename": "logg.log",
             "formatter": "verbose2",
         },
-        'mail_admins': {
-            'level': 'ERROR',
-            'filters': ['require_debug_true'],
-            'class': 'django.utils.log.AdminEmailHandler',
-            'email_backend': EMAIL_BACKEND,
+        "mail_admins": {
+            "level": "ERROR",
+            "filters": ["require_debug_true"],
+            "class": "django.utils.log.AdminEmailHandler",
+            "email_backend": EMAIL_BACKEND,
             # 'include_html': True,
-
         },
     },
     "root": {"level": "INFO", "handlers": ["console"]},
@@ -241,6 +237,3 @@ WEBPACK_LOADER = {
         ),  # путь до файла webpack-stats.json
     }
 }
-
-
-

@@ -16,6 +16,7 @@ import logging
 from task_m.models import Tasks, Projects
 from rest_framework import viewsets, mixins
 from rest_framework.exceptions import ValidationError, PermissionDenied
+
 log = logging.getLogger("myLogger")
 
 
@@ -31,7 +32,6 @@ class ProjectListView(ListView):
     model = Projects
     context_object_name = "name_projects"
     template_name = "z_list_p.html"
-
 
 
 class TasksCreateView(CreateView):
@@ -96,9 +96,6 @@ class ProjectsDeleteView(DeleteView):
     context_object_name = "name_project"
     template_name = "z_del_p.html"
     success_url = "/project_data/"
-
-
-
 
 
 class ProjectsViewSet(
@@ -174,10 +171,10 @@ class SyncView(View):
         log.debug("Logging some event")
 
         send_mail(
-            'Оповещение',
-            'Что-то произошло, иди посмотри.',
-            'from@example.com',
-            ['to@example.com'],
+            "Оповещение",
+            "Что-то произошло, иди посмотри.",
+            "from@example.com",
+            ["to@example.com"],
             fail_silently=False,
         )
 
