@@ -185,5 +185,3 @@ class SyncView(View):
         # log.error("SOMETHING WENT WRONG")
         #
         # return HttpResponse(request.body)
-def index(request):
-    return render(request, 'react_frontend/index.html')
