@@ -1,5 +1,6 @@
 from django.contrib.auth import get_user_model
 from django.core.mail import send_mail
+from django.shortcuts import render
 from django.views import View
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated
@@ -184,3 +185,5 @@ class SyncView(View):
         # log.error("SOMETHING WENT WRONG")
         #
         # return HttpResponse(request.body)
+def index(request):
+    return render(request, 'react_frontend/index.html')

@@ -38,11 +38,11 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "task_m",
-    "front_API",
     "rest_framework",
     "corsheaders",
     "webpack_loader",
     "simple_history",
+    "react_frontend"
 ]
 
 MIDDLEWARE = [

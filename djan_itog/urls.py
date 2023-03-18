@@ -42,7 +42,6 @@ urlpatterns = [
     path("project_del/<int:pk>", ProjectsDeleteView.as_view()),
     path("accounts/", include("django.contrib.auth.urls")),
     path("api/", include("task_m.urls")),
-    # path('', include('leads.urls')),
-    path("", include("front_API.urls")),
     path('views/django', SyncView.as_view(), name="async-get"),
+    path("", include("react_frontend.urls")),
 ]

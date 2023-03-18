@@ -7,7 +7,7 @@ from task_m.views import TasksViewSet, ProjectsViewSet
 
 router = DefaultRouter()
 
-app_name = "task_mapp"
+app_name = "app"
 
 router.register(
     prefix="tasks",
