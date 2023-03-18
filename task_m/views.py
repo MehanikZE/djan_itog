@@ -180,7 +180,7 @@ class SyncView(View):
             fail_silently=False,
         )
 
-        raise PermissionDenied(detail="no valid sorry")
-        log.error("SOMETHING WENT WRONG")
-
-        return HttpResponse(request.body)
+        # raise PermissionDenied(detail="no valid sorry")
+        # log.error("SOMETHING WENT WRONG")
+        #
+        # return HttpResponse(request.body)
