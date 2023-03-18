@@ -1,0 +1,19 @@
+{
+  "name": "react_frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development ./src/index.js --output-path ./static/frontend/main.js",
+    "build": "webpack --mode production ./src/index.js --output-path ./static/frontend/main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "react-dom": "^18.2.0",
+    "webpack": "^5.76.2",
+    "webpack-cli": "^5.0.1"
+  }
+}
