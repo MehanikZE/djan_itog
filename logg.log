@@ -34,24 +34,6 @@ DEBUG 2023-03-18 23:49:11,606 utils 11712 5268 (0.000) SELECT "django_session"."
 DEBUG 2023-03-18 23:49:11,608 utils 11712 5268 (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
 DEBUG 2023-03-18 23:49:11,608 utils 11712 5268 (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
 ERROR 2023-03-18 23:49:11,620 log 11712 5268 Internal Server Error: /
-Traceback (most recent call last):
-  File "C:\Users\Admin\PycharmProjects\djan_itog\venv\Lib\site-packages\django\core\handlers\exception.py", line 56, in inner
-    response = get_response(request)
-               ^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Admin\PycharmProjects\djan_itog\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Admin\PycharmProjects\djan_itog\react_frontend\views.py", line 5, in index
-    return render(request, 'react_frontend/index.html')
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Admin\PycharmProjects\djan_itog\venv\Lib\site-packages\django\shortcuts.py", line 24, in render
-    content = loader.render_to_string(template_name, context, request, using=using)
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Admin\PycharmProjects\djan_itog\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
-    template = get_template(template_name, using=using)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Admin\PycharmProjects\djan_itog\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
-    raise TemplateDoesNotExist(template_name, chain=chain)
 django.template.exceptions.TemplateDoesNotExist: react_frontend/index.html
 DEBUG 2023-03-18 23:49:18,616 utils 11712 5268 (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2023-03-18T20:49:18.584666+00:00'::timestamptz AND "django_session"."session_key" = 'qof6ddbt6ntlalcymm7y6d08snult836') LIMIT 21; args=(datetime.datetime(2023, 3, 18, 20, 49, 18, 584666, tzinfo=datetime.timezone.utc), 'qof6ddbt6ntlalcymm7y6d08snult836'); alias=default
 DEBUG 2023-03-18 23:49:18,616 utils 11712 5268 (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2023-03-18T20:49:18.584666+00:00'::timestamptz AND "django_session"."session_key" = 'qof6ddbt6ntlalcymm7y6d08snult836') LIMIT 21; args=(datetime.datetime(2023, 3, 18, 20, 49, 18, 584666, tzinfo=datetime.timezone.utc), 'qof6ddbt6ntlalcymm7y6d08snult836'); alias=default
