@@ -1,3 +1,6 @@
+from django.contrib.auth import get_user_model
+from django.core.mail import send_mail
+from django.views import View
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
@@ -11,7 +14,7 @@ from django.views.generic import (
 import logging
 from task_m.models import Tasks, Projects
 from rest_framework import viewsets, mixins
-
+from rest_framework.exceptions import ValidationError, PermissionDenied
 log = logging.getLogger("myLogger")
 
 
@@ -162,3 +165,22 @@ class TasksViewSet(
 
     def list(self, request, *args, **kwargs):
         return super().list(request, *args, **kwargs)
+
+
+class SyncView(View):
+    def get(self, request, *args, **kwargs):
+        list(get_user_model().objects.all())
+        log.debug("Logging some event")
+
+        send_mail(
+            'Оповещение',
+            'Что-то произошло, иди посмотри.',
+            'from@example.com',
+            ['to@example.com'],
+            fail_silently=False,
+        )
+
+        raise PermissionDenied(detail="no valid sorry")
+        log.error("SOMETHING WENT WRONG")
+
+        return HttpResponse(request.body)

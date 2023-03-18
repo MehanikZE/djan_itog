@@ -138,6 +138,35 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+SERVER_EMAIL = 'server@server.eu'
+
+ADMINS = (
+   ('ADMIN', 'evgeni.a.zhukov@gmail.com'),
+ )
+
+MANAGERS = ADMINS
+
+
+# ADMINS = (
+#     ('You', 'you@email.com'),
+# )
+# MANAGERS = ADMINS
+
+
+
+if DEBUG:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'e969850@gmail.com'
+EMAIL_HOST_PASSWORD = 'Qq12345!@'
+# если используется защищенное соединение
+EMAIL_PORT = 465
+EMAIL_USE_TLS = True
+
 LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
@@ -165,6 +194,14 @@ LOGGING = {
             "class": "logging.FileHandler",
             "filename": "logg.log",
             "formatter": "verbose2",
+        },
+        'mail_admins': {
+            'level': 'ERROR',
+            'filters': ['require_debug_true'],
+            'class': 'django.utils.log.AdminEmailHandler',
+            'email_backend': EMAIL_BACKEND,
+            # 'include_html': True,
+
         },
     },
     "root": {"level": "INFO", "handlers": ["console"]},
@@ -204,3 +241,6 @@ WEBPACK_LOADER = {
         ),  # путь до файла webpack-stats.json
     }
 }
+
+
+
