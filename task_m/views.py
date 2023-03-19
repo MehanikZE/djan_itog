@@ -151,7 +151,6 @@ class TasksViewSet(
         serializer = FieldSerializer(queryset, many=True)
         return Response(serializer.data)
 
-
     def create(self, request, *args, **kwargs):
         return super().create(request, *args, **kwargs)
 
