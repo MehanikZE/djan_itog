@@ -101,33 +101,6 @@ WARNING 2023-03-18 23:52:22,758 log 4276 8656 Not Found: /
 INFO 2023-03-18 23:53:07,824 autoreload 4276 8180 C:\Users\Admin\PycharmProjects\djan_itog\task_m\views.py changed, reloading.
 INFO 2023-03-19 15:52:49,033 autoreload 2912 10396 Watching for file changes with StatReloader
 DEBUG 2023-03-19 15:52:49,539 utils 2912 3408 (0.062) 
-            SELECT
-                c.relname,
-                CASE
-                    WHEN c.relispartition THEN 'p'
-                    WHEN c.relkind IN ('m', 'v') THEN 'v'
-                    ELSE 't'
-                END
-            FROM pg_catalog.pg_class c
-            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
-                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
-                AND pg_catalog.pg_table_is_visible(c.oid)
-        ; args=None; alias=default
-DEBUG 2023-03-19 15:52:49,539 utils 2912 3408 (0.062) 
-            SELECT
-                c.relname,
-                CASE
-                    WHEN c.relispartition THEN 'p'
-                    WHEN c.relkind IN ('m', 'v') THEN 'v'
-                    ELSE 't'
-                END
-            FROM pg_catalog.pg_class c
-            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
-                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
-                AND pg_catalog.pg_table_is_visible(c.oid)
-        ; args=None; alias=default
 DEBUG 2023-03-19 15:52:49,545 utils 2912 3408 (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
 DEBUG 2023-03-19 15:52:49,545 utils 2912 3408 (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
 WARNING 2023-03-19 15:53:00,726 log 2912 8572 Not Found: /
