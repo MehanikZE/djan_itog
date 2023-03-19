@@ -139,7 +139,7 @@ DEBUG 2023-03-19 15:54:10,832 utils 2912 8572 (0.016) SELECT "django_session"."s
 DEBUG 2023-03-19 15:54:10,838 utils 2912 8572 (0.016) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
 DEBUG 2023-03-19 15:54:10,838 utils 2912 8572 (0.016) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
 ERROR 2023-03-19 15:54:10,855 log 2912 8572 Internal Server Error: /app
-File "C:\Users\Admin\PycharmProjects\djan_itog\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+ File "C:\Users\Admin\PycharmProjects\djan_itog\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
 raise TemplateDoesNotExist(template_name, chain=chain)
 django.template.exceptions.TemplateDoesNotExist: front_API/index.html
 INFO 2023-03-19 15:57:34,431 autoreload 11496 14148 Watching for file changes with StatReloader
