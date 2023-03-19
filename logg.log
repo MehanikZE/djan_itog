@@ -142,3 +142,7 @@ ERROR 2023-03-19 15:54:10,855 log 2912 8572 Internal Server Error: /app
 File "C:\Users\Admin\PycharmProjects\djan_itog\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
     raise TemplateDoesNotExist(template_name, chain=chain)
 django.template.exceptions.TemplateDoesNotExist: front_API/index.html
+INFO 2023-03-19 15:57:34,431 autoreload 11496 14148 Watching for file changes with StatReloader
+DEBUG 2023-03-19 15:57:34,565 utils 11496 12428 (0.000) 
+DEBUG 2023-03-19 15:57:34,567 utils 11496 12428 (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+DEBUG 2023-03-19 15:57:34,567 utils 11496 12428 (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
