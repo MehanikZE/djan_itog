@@ -94,7 +94,7 @@ DEBUG 2023-03-18 23:52:18,613 utils 4276 8656 (0.000) SELECT "auth_user"."id", "
 DEBUG 2023-03-18 23:52:18,613 utils 4276 8656 (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2 LIMIT 21; args=(2,); alias=default
 ERROR 2023-03-18 23:52:18,625 log 4276 8656 Internal Server Error: /app
 Traceback (most recent call last):
-  File "C:\Users\Admin\PycharmProjects\djan_itog\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+File "C:\Users\Admin\PycharmProjects\djan_itog\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
     raise TemplateDoesNotExist(template_name, chain=chain)
 django.template.exceptions.TemplateDoesNotExist: react_frontend/index.html
 WARNING 2023-03-18 23:52:22,758 log 4276 8656 Not Found: /
