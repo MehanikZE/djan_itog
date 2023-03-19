@@ -119,3 +119,102 @@ INFO 2023-03-19 15:57:34,431 autoreload 11496 14148 Watching for file changes wi
 DEBUG 2023-03-19 15:57:34,565 utils 11496 12428 (0.000) 
 DEBUG 2023-03-19 15:57:34,567 utils 11496 12428 (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
 DEBUG 2023-03-19 15:57:34,567 utils 11496 12428 (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+INFO 2023-03-20 00:14:20,930 autoreload 2580 13608 Watching for file changes with StatReloader
+DEBUG 2023-03-20 00:14:21,062 utils 2580 10360 (0.000) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+DEBUG 2023-03-20 00:14:21,062 utils 2580 10360 (0.000) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+DEBUG 2023-03-20 00:14:21,064 utils 2580 10360 (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+DEBUG 2023-03-20 00:14:21,064 utils 2580 10360 (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+DEBUG 2023-03-20 00:14:30,257 utils 2580 15244 (0.016) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user"; args=(); alias=default
+DEBUG 2023-03-20 00:14:30,257 utils 2580 15244 (0.016) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user"; args=(); alias=default
+ERROR 2023-03-20 00:14:40,376 log 2580 15244 Internal Server Error: /views/django
+DEBUG 2023-03-20 00:23:13,000 utils 12648 15236 (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+DEBUG 2023-03-20 00:23:13,000 utils 12648 15236 (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+DEBUG 2023-03-20 00:23:15,309 utils 12648 14428 (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'adminis' LIMIT 21; args=('adminis',); alias=default
+DEBUG 2023-03-20 00:23:15,309 utils 12648 14428 (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'adminis' LIMIT 21; args=('adminis',); alias=default
+DEBUG 2023-03-20 00:23:15,409 utils 12648 14428 (0.000) SELECT COUNT(*) AS "__count" FROM "task_m_tasks"; args=(); alias=default
+DEBUG 2023-03-20 00:23:15,409 utils 12648 14428 (0.000) SELECT COUNT(*) AS "__count" FROM "task_m_tasks"; args=(); alias=default
+DEBUG 2023-03-20 00:23:15,409 utils 12648 14428 (0.000) SELECT "task_m_tasks"."id", "task_m_tasks"."name_task", "task_m_tasks"."soderzhanie", "task_m_tasks"."status", "task_m_tasks"."time_nach_z", "task_m_tasks"."active_switch", "task_m_tasks"."status_z", "task_m_tasks"."time_zav_z", "task_m_tasks"."time_dedlin_task" FROM "task_m_tasks" LIMIT 6 OFFSET 14; args=(); alias=default
+DEBUG 2023-03-20 00:23:15,409 utils 12648 14428 (0.000) SELECT "task_m_tasks"."id", "task_m_tasks"."name_task", "task_m_tasks"."soderzhanie", "task_m_tasks"."status", "task_m_tasks"."time_nach_z", "task_m_tasks"."active_switch", "task_m_tasks"."status_z", "task_m_tasks"."time_zav_z", "task_m_tasks"."time_dedlin_task" FROM "task_m_tasks" LIMIT 6 OFFSET 14; args=(); alias=default
+DEBUG 2023-03-20 00:23:15,412 utils 12648 14428 (0.015) SELECT "task_m_projects"."id", "task_m_projects"."name_project", "task_m_projects"."soderzhanie_p", "task_m_projects"."time_nach", "task_m_projects"."time_dedlin_proj", "task_m_projects"."status_p", "task_m_projects"."active_switch_prj", "task_m_projects"."time_zav" FROM "task_m_projects" INNER JOIN "task_m_tasks_projects" ON ("task_m_projects"."id" = "task_m_tasks_projects"."projects_id") WHERE "task_m_tasks_projects"."tasks_id" = 16; args=(16,); alias=default
+DEBUG 2023-03-20 00:23:15,412 utils 12648 14428 (0.015) SELECT "task_m_projects"."id", "task_m_projects"."name_project", "task_m_projects"."soderzhanie_p", "task_m_projects"."time_nach", "task_m_projects"."time_dedlin_proj", "task_m_projects"."status_p", "task_m_projects"."active_switch_prj", "task_m_projects"."time_zav" FROM "task_m_projects" INNER JOIN "task_m_tasks_projects" ON ("task_m_projects"."id" = "task_m_tasks_projects"."projects_id") WHERE "task_m_tasks_projects"."tasks_id" = 16; args=(16,); alias=default
+DEBUG 2023-03-20 00:23:15,412 utils 12648 14428 (0.000) SELECT "task_m_projects"."id", "task_m_projects"."name_project", "task_m_projects"."soderzhanie_p", "task_m_projects"."time_nach", "task_m_projects"."time_dedlin_proj", "task_m_projects"."status_p", "task_m_projects"."active_switch_prj", "task_m_projects"."time_zav" FROM "task_m_projects" INNER JOIN "task_m_tasks_projects" ON ("task_m_projects"."id" = "task_m_tasks_projects"."projects_id") WHERE "task_m_tasks_projects"."tasks_id" = 17; args=(17,); alias=default
+DEBUG 2023-03-20 00:23:15,412 utils 12648 14428 (0.000) SELECT "task_m_projects"."id", "task_m_projects"."name_project", "task_m_projects"."soderzhanie_p", "task_m_projects"."time_nach", "task_m_projects"."time_dedlin_proj", "task_m_projects"."status_p", "task_m_projects"."active_switch_prj", "task_m_projects"."time_zav" FROM "task_m_projects" INNER JOIN "task_m_tasks_projects" ON ("task_m_projects"."id" = "task_m_tasks_projects"."projects_id") WHERE "task_m_tasks_projects"."tasks_id" = 17; args=(17,); alias=default
+DEBUG 2023-03-20 00:23:15,413 utils 12648 14428 (0.000) SELECT "task_m_projects"."id", "task_m_projects"."name_project", "task_m_projects"."soderzhanie_p", "task_m_projects"."time_nach", "task_m_projects"."time_dedlin_proj", "task_m_projects"."status_p", "task_m_projects"."active_switch_prj", "task_m_projects"."time_zav" FROM "task_m_projects" INNER JOIN "task_m_tasks_projects" ON ("task_m_projects"."id" = "task_m_tasks_projects"."projects_id") WHERE "task_m_tasks_projects"."tasks_id" = 18; args=(18,); alias=default
+DEBUG 2023-03-20 00:23:15,413 utils 12648 14428 (0.000) SELECT "task_m_projects"."id", "task_m_projects"."name_project", "task_m_projects"."soderzhanie_p", "task_m_projects"."time_nach", "task_m_projects"."time_dedlin_proj", "task_m_projects"."status_p", "task_m_projects"."active_switch_prj", "task_m_projects"."time_zav" FROM "task_m_projects" INNER JOIN "task_m_tasks_projects" ON ("task_m_projects"."id" = "task_m_tasks_projects"."projects_id") WHERE "task_m_tasks_projects"."tasks_id" = 18; args=(18,); alias=default
+DEBUG 2023-03-20 00:23:15,414 utils 12648 14428 (0.000) SELECT "task_m_projects"."id", "task_m_projects"."name_project", "task_m_projects"."soderzhanie_p", "task_m_projects"."time_nach", "task_m_projects"."time_dedlin_proj", "task_m_projects"."status_p", "task_m_projects"."active_switch_prj", "task_m_projects"."time_zav" FROM "task_m_projects" INNER JOIN "task_m_tasks_projects" ON ("task_m_projects"."id" = "task_m_tasks_projects"."projects_id") WHERE "task_m_tasks_projects"."tasks_id" = 19; args=(19,); alias=default
+DEBUG 2023-03-20 00:23:15,414 utils 12648 14428 (0.000) SELECT "task_m_projects"."id", "task_m_projects"."name_project", "task_m_projects"."soderzhanie_p", "task_m_projects"."time_nach", "task_m_projects"."time_dedlin_proj", "task_m_projects"."status_p", "task_m_projects"."active_switch_prj", "task_m_projects"."time_zav" FROM "task_m_projects" INNER JOIN "task_m_tasks_projects" ON ("task_m_projects"."id" = "task_m_tasks_projects"."projects_id") WHERE "task_m_tasks_projects"."tasks_id" = 19; args=(19,); alias=default
+DEBUG 2023-03-20 00:23:15,414 utils 12648 14428 (0.000) SELECT "task_m_projects"."id", "task_m_projects"."name_project", "task_m_projects"."soderzhanie_p", "task_m_projects"."time_nach", "task_m_projects"."time_dedlin_proj", "task_m_projects"."status_p", "task_m_projects"."active_switch_prj", "task_m_projects"."time_zav" FROM "task_m_projects" INNER JOIN "task_m_tasks_projects" ON ("task_m_projects"."id" = "task_m_tasks_projects"."projects_id") WHERE "task_m_tasks_projects"."tasks_id" = 20; args=(20,); alias=default
+DEBUG 2023-03-20 00:23:15,414 utils 12648 14428 (0.000) SELECT "task_m_projects"."id", "task_m_projects"."name_project", "task_m_projects"."soderzhanie_p", "task_m_projects"."time_nach", "task_m_projects"."time_dedlin_proj", "task_m_projects"."status_p", "task_m_projects"."active_switch_prj", "task_m_projects"."time_zav" FROM "task_m_projects" INNER JOIN "task_m_tasks_projects" ON ("task_m_projects"."id" = "task_m_tasks_projects"."projects_id") WHERE "task_m_tasks_projects"."tasks_id" = 20; args=(20,); alias=default
+DEBUG 2023-03-20 00:23:15,415 utils 12648 14428 (0.000) SELECT "task_m_projects"."id", "task_m_projects"."name_project", "task_m_projects"."soderzhanie_p", "task_m_projects"."time_nach", "task_m_projects"."time_dedlin_proj", "task_m_projects"."status_p", "task_m_projects"."active_switch_prj", "task_m_projects"."time_zav" FROM "task_m_projects" INNER JOIN "task_m_tasks_projects" ON ("task_m_projects"."id" = "task_m_tasks_projects"."projects_id") WHERE "task_m_tasks_projects"."tasks_id" = 21; args=(21,); alias=default
+DEBUG 2023-03-20 00:23:15,415 utils 12648 14428 (0.000) SELECT "task_m_projects"."id", "task_m_projects"."name_project", "task_m_projects"."soderzhanie_p", "task_m_projects"."time_nach", "task_m_projects"."time_dedlin_proj", "task_m_projects"."status_p", "task_m_projects"."active_switch_prj", "task_m_projects"."time_zav" FROM "task_m_projects" INNER JOIN "task_m_tasks_projects" ON ("task_m_projects"."id" = "task_m_tasks_projects"."projects_id") WHERE "task_m_tasks_projects"."tasks_id" = 21; args=(21,); alias=default
+DEBUG 2023-03-20 00:23:26,391 utils 12648 14428 (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'adminis' LIMIT 21; args=('adminis',); alias=default
+DEBUG 2023-03-20 00:23:26,391 utils 12648 14428 (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'adminis' LIMIT 21; args=('adminis',); alias=default
+DEBUG 2023-03-20 00:23:26,490 utils 12648 14428 (0.015) SELECT COUNT(*) AS "__count" FROM "task_m_projects"; args=(); alias=default
+DEBUG 2023-03-20 00:23:26,490 utils 12648 14428 (0.015) SELECT COUNT(*) AS "__count" FROM "task_m_projects"; args=(); alias=default
+DEBUG 2023-03-20 00:23:26,491 utils 12648 14428 (0.000) SELECT "task_m_projects"."id", "task_m_projects"."name_project", "task_m_projects"."soderzhanie_p", "task_m_projects"."time_nach", "task_m_projects"."time_dedlin_proj", "task_m_projects"."status_p", "task_m_projects"."active_switch_prj", "task_m_projects"."time_zav" FROM "task_m_projects" ORDER BY "task_m_projects"."id" ASC LIMIT 7; args=(); alias=default
+DEBUG 2023-03-20 00:23:26,491 utils 12648 14428 (0.000) SELECT "task_m_projects"."id", "task_m_projects"."name_project", "task_m_projects"."soderzhanie_p", "task_m_projects"."time_nach", "task_m_projects"."time_dedlin_proj", "task_m_projects"."status_p", "task_m_projects"."active_switch_prj", "task_m_projects"."time_zav" FROM "task_m_projects" ORDER BY "task_m_projects"."id" ASC LIMIT 7; args=(); alias=default
+DEBUG 2023-03-20 00:23:42,780 utils 12648 14428 (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'adminis' LIMIT 21; args=('adminis',); alias=default
+DEBUG 2023-03-20 00:23:42,780 utils 12648 14428 (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'adminis' LIMIT 21; args=('adminis',); alias=default
+WARNING 2023-03-20 00:23:42,878 log 12648 14428 Bad Request: /api/projects/
+DEBUG 2023-03-20 00:23:53,947 utils 12648 14428 (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'adminis' LIMIT 21; args=('adminis',); alias=default
+DEBUG 2023-03-20 00:23:53,947 utils 12648 14428 (0.000) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."username" = 'adminis' LIMIT 21; args=('adminis',); alias=default
+DEBUG 2023-03-20 00:23:54,046 utils 12648 14428 (0.000) INSERT INTO "task_m_projects" ("name_project", "soderzhanie_p", "time_nach", "time_dedlin_proj", "status_p", "active_switch_prj", "time_zav") VALUES ('10000', '����������', '2023-03-19T21:23:54.045456+00:00'::timestamptz, NULL, '��������', true, '2023-03-19T21:23:54.045456+00:00'::timestamptz) RETURNING "task_m_projects"."id"; args=('10000', '����������', datetime.datetime(2023, 3, 19, 21, 23, 54, 45456, tzinfo=datetime.timezone.utc), None, '��������', True, datetime.datetime(2023, 3, 19, 21, 23, 54, 45456, tzinfo=datetime.timezone.utc)); alias=default
+DEBUG 2023-03-20 00:23:54,046 utils 12648 14428 (0.000) INSERT INTO "task_m_projects" ("name_project", "soderzhanie_p", "time_nach", "time_dedlin_proj", "status_p", "active_switch_prj", "time_zav") VALUES ('10000', '����������', '2023-03-19T21:23:54.045456+00:00'::timestamptz, NULL, '��������', true, '2023-03-19T21:23:54.045456+00:00'::timestamptz) RETURNING "task_m_projects"."id"; args=('10000', '����������', datetime.datetime(2023, 3, 19, 21, 23, 54, 45456, tzinfo=datetime.timezone.utc), None, '��������', True, datetime.datetime(2023, 3, 19, 21, 23, 54, 45456, tzinfo=datetime.timezone.utc)); alias=default
+INFO 2023-03-20 00:24:12,023 autoreload 12648 13252 C:\Users\Admin\PycharmProjects\djan_itog\task_m\views.py changed, reloading.
+INFO 2023-03-20 00:24:12,375 autoreload 1684 8660 Watching for file changes with StatReloader
+DEBUG 2023-03-20 00:24:12,517 utils 1684 3964 (0.000) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+DEBUG 2023-03-20 00:24:12,517 utils 1684 3964 (0.000) 
+            SELECT
+                c.relname,
+                CASE
+                    WHEN c.relispartition THEN 'p'
+                    WHEN c.relkind IN ('m', 'v') THEN 'v'
+                    ELSE 't'
+                END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None; alias=default
+DEBUG 2023-03-20 00:24:12,519 utils 1684 3964 (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
+DEBUG 2023-03-20 00:24:12,519 utils 1684 3964 (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default

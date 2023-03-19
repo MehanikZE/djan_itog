@@ -109,10 +109,6 @@ class ProjectsViewSet(
     queryset = Projects.objects.all().order_by("id")
     serializer_class = ProjectsSerializer
     permission_classes = [IsAuthenticated]
-    serializer_class = TasksSerializer
-
-    queryset = Tasks.objects.all().order_by("id")
-    serializer_class = TasksSerializer
 
     def create(self, request, *args, **kwargs):
         return super().create(request, *args, **kwargs)
@@ -155,8 +151,6 @@ class TasksViewSet(
         serializer = FieldSerializer(queryset, many=True)
         return Response(serializer.data)
 
-    queryset = Tasks.objects.all().order_by("id")
-    serializer_class = TasksSerializer
 
     def create(self, request, *args, **kwargs):
         return super().create(request, *args, **kwargs)
