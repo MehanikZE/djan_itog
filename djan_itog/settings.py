@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "webpack_loader",
     "simple_history",
-    "react_frontend",
+    "front_API",
 ]
 
 MIDDLEWARE = [

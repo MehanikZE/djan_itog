@@ -43,5 +43,5 @@ urlpatterns = [
     path("accounts/", include("django.contrib.auth.urls")),
     path("api/", include("task_m.urls")),
     path("views/django", SyncView.as_view(), name="async-get"),
-    path("app", include("react_frontend.urls")),
+    path("app", include("front_API.urls")),
 ]
