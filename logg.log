@@ -189,32 +189,5 @@ DEBUG 2023-03-20 00:23:54,046 utils 12648 14428 (0.000) INSERT INTO "task_m_proj
 INFO 2023-03-20 00:24:12,023 autoreload 12648 13252 C:\Users\Admin\PycharmProjects\djan_itog\task_m\views.py changed, reloading.
 INFO 2023-03-20 00:24:12,375 autoreload 1684 8660 Watching for file changes with StatReloader
 DEBUG 2023-03-20 00:24:12,517 utils 1684 3964 (0.000) 
-            SELECT
-                c.relname,
-                CASE
-                    WHEN c.relispartition THEN 'p'
-                    WHEN c.relkind IN ('m', 'v') THEN 'v'
-                    ELSE 't'
-                END
-            FROM pg_catalog.pg_class c
-            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
-                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
-                AND pg_catalog.pg_table_is_visible(c.oid)
-        ; args=None; alias=default
-DEBUG 2023-03-20 00:24:12,517 utils 1684 3964 (0.000) 
-            SELECT
-                c.relname,
-                CASE
-                    WHEN c.relispartition THEN 'p'
-                    WHEN c.relkind IN ('m', 'v') THEN 'v'
-                    ELSE 't'
-                END
-            FROM pg_catalog.pg_class c
-            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
-                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
-                AND pg_catalog.pg_table_is_visible(c.oid)
-        ; args=None; alias=default
 DEBUG 2023-03-20 00:24:12,519 utils 1684 3964 (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
 DEBUG 2023-03-20 00:24:12,519 utils 1684 3964 (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=(); alias=default
