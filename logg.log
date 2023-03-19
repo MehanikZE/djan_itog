@@ -95,7 +95,7 @@ DEBUG 2023-03-18 23:52:18,613 utils 4276 8656 (0.000) SELECT "auth_user"."id", "
 ERROR 2023-03-18 23:52:18,625 log 4276 8656 Internal Server Error: /app
 Traceback (most recent call last):
 File "C:\Users\Admin\PycharmProjects\djan_itog\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
-   raise TemplateDoesNotExist(template_name, chain=chain)
+  raise TemplateDoesNotExist(template_name, chain=chain)
 django.template.exceptions.TemplateDoesNotExist: react_frontend/index.html
 WARNING 2023-03-18 23:52:22,758 log 4276 8656 Not Found: /
 INFO 2023-03-18 23:53:07,824 autoreload 4276 8180 C:\Users\Admin\PycharmProjects\djan_itog\task_m\views.py changed, reloading.
